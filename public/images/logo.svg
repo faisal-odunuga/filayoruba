@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120">
+  <rect width="240" height="120" rx="4" fill="#fed504"/>
+  <text
+    x="205"
+    y="66"
+    text-anchor="end"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="64"
+    font-weight="bold"
+    fill="#1a1a1a"
+  >
+    Fìlà
+  </text>
+  <text
+    x="205"
+    y="96"
+    text-anchor="end"
+    font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="18"
+    font-weight="700"
+    letter-spacing="4"
+    fill="#1a1a1a"
+  >
+    YORÙBÁ
+  </text>
+</svg>
