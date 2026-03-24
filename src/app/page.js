@@ -162,23 +162,28 @@ export default function Home() {
               { name: 'Abetíajá', image: '/images/catalogue/abetiaja-catalogue.jpeg' },
               { name: 'Àdìgún', image: '/images/catalogue/adigun-catalogue.jpg' },
             ].map((category) => (
-              <div key={category.name} className='group border border-white/5 bg-surface-container-high hover:border-primary transition-colors overflow-hidden'>
+              <Link
+                key={category.name}
+                href={`/filas?category=${encodeURIComponent(category.name)}`}
+                className='group border border-white/5 bg-surface-container-high hover:border-primary transition-all overflow-hidden block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#0a0a0a]'
+              >
                 <div className='aspect-square relative overflow-hidden'>
                   <Image
                     src={category.image}
                     alt={category.name}
                     fill
                     sizes='(max-width: 768px) 100vw, 25vw'
-                    className='object-cover transition-transform duration-500 group-hover:scale-105'
+                    className='object-cover transition-transform duration-500 group-hover:scale-105 group-focus:scale-105'
                   />
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300' />
                 </div>
                 <div className='p-4 flex items-center justify-between'>
-                  <span className='font-headline text-sm uppercase tracking-widest text-white'>
+                  <span className='font-headline text-sm uppercase tracking-widest text-white group-hover:text-primary group-focus:text-primary transition-colors'>
                     {category.name}
                   </span>
-                  <span className='material-symbols-outlined text-primary text-lg'>arrow_right_alt</span>
+                  <span className='material-symbols-outlined text-primary text-lg transform transition-transform group-hover:translate-x-1 group-focus:translate-x-1'>arrow_right_alt</span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
